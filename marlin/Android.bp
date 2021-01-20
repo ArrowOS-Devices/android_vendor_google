@@ -446,3 +446,19 @@ dex_import {
 	soc_specific: true,
 }
 
+dex_import {
+	name: "WfdCommon",
+	owner: "google",
+	jars: ["proprietary/framework/WfdCommon.jar"],
+}
+
+android_app_import {
+	name: "WfdService",
+	owner: "google",
+	apk: "proprietary/priv-app/WfdService/WfdService.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+}
